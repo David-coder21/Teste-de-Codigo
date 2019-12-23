@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="splash">
+        <div class="pure-g-r">
+            <div class="pure-u-1">
+                <div class="l-box splash-text">
+                    <h1 class="splash-head">
+                       Um Site que vai achar a Vaga ideal Para Você!
+                    </h1>
+                    <br>
+                    <br>
+                    <br>
+                    <h2 class="splash-subhead">
+                        <p>Bem vindo, {% if user.is_authenticated %} {{user.username}}{% else %}Visitante{% endif %}!</p>
+                    </h2>
+                    <p>
+                    <strong>Número de candidatos registrados:</strong> {{ count }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+  
+   
+{% endblock %}
